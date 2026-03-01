@@ -88,11 +88,7 @@ audio {
 
     <button onclick="specialMessage()">Bấm vào đây nè</button>
 </div>
-
-<audio id="music" loop>
-    <source src="music.mp3" type="audio/mpeg">
-</audio>
-
+    
 <script>
 function createHeart() {
   const heart = document.createElement("div");
@@ -109,8 +105,8 @@ function createHeart() {
 
 setInterval(createHeart, 300);
 function specialMessage() {
-  const music = document.getElementById("music");
-  music.play();
+  const player = document.getElementById("ytplayer");
+  player.scr = "https://www.youtube.com/embed/DcCISK3sCYg?autoplay=1&loop=1&playlist=DcCISK3sCYg";
 
   const extra = document.getElementById("extraMessage");
 
@@ -123,5 +119,14 @@ function specialMessage() {
 }
 </script>
 
+<iframe id="ytplayer"
+width="0"
+height="0"
+src=""
+frameborder="0"
+allow="autoplay">
+</iframe>
+
 </body>
 </html>
+
